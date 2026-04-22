@@ -1,0 +1,15 @@
+Objects/
+Listings/
+*.axf
+*.hex
+*.bin
+*.map
+*.dep
+*.d
+*.o
+*.lnp
+*.crf
+*.bak
+*.uvguix
+*.scvd
+*.stldr
