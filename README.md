@@ -3,7 +3,7 @@
 Bare-metal C firmware for a dual-band RF detector operating at **13.56 MHz** (NFC/RFID)
 and **433 MHz** (ISM band), designed for spectrum monitoring and cybersecurity threat detection.
 
-Developed as part of a Master's research at **UNIFEI** (Universidade Federal de Itajubá),
+Developed as part of a Master's research at **UNIFEI** (Federal University of Itajubá),
 affiliated with the **Cybersecurity and Critical Systems (CS)² group**.
 
 ## Hardware
