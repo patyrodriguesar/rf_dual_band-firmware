@@ -186,7 +186,6 @@ typedef struct {
     uint32_t last_change_ms;
 } button_t;
 
-
 static volatile uint32_t  g_ms_tick          = 0U;
 static volatile uint32_t  g_system_faults    = 0U;
 static volatile uint32_t  g_powered          = 1U;
@@ -236,7 +235,6 @@ static int32_t iwdg_init(void) {
         }
         t--;
     }
-
     REG(IWDG_KR) = IWDG_KEY_START;
     return status;
 }
@@ -418,15 +416,12 @@ static uint32_t rf_process(rf_detector_t *d, const rf_config_t *cfg, uint32_t ov
 
 static void i2c_init(void) {
     REG(RCC_APB1ENR) |= RCC_APB1_I2C1EN;
-
     REG(I2C1_CR1) |= I2C_CR1_SWRST;
     REG(I2C1_CR1) &= ~I2C_CR1_SWRST;
     REG(I2C1_CR1) &= ~I2C_CR1_PE;
-
     REG(I2C1_CR2)   = PCLK1_HZ / 1000000U;
     REG(I2C1_CCR)   = PCLK1_HZ / (2U * I2C_SCL_HZ);
     REG(I2C1_TRISE) = (PCLK1_HZ / 1000000U) + 1U;
-
     REG(I2C1_CR1) |= I2C_CR1_PE;
 }
 
@@ -672,25 +667,6 @@ static void display_states(void) {
     oled_print(5U, 65U, state_text(g_rf[BAND_433 ].state));
 }
 
-static void display_high_counts(void) {
-    char     buf[6];
-    uint32_t b;
-    for (b = 0U; b < BAND_COUNT; b++) {
-        uint32_t v   = g_rf[b].last_high_count;
-        uint32_t pos = 5U;
-        buf[5] = '\0';
-        if (v == 0U) {
-            buf[4] = '0'; pos = 4U;
-        } else {
-            while ((v > 0U) && (pos > 0U)) {
-                pos--;
-                buf[pos] = (char)('0' + (v % 10U));
-                v /= 10U;
-            }
-        }       
-    }
-}
-
 static void buzzer_update(void) {
     if ((g_powered != 0U) && ((g_rf[BAND_1356].state == RF_JAMMING) || (g_rf[BAND_433 ].state == RF_JAMMING))) {
         GPIO_SET(GPIOA_BSRR, PIN_BUZZER);
@@ -786,7 +762,6 @@ int main(void) {
 
         if ((g_powered != 0U) && ((changed_1356 != 0U) || (changed_433 != 0U))) {
             display_states();
-            display_high_counts();
             buzzer_update();
         }
 
