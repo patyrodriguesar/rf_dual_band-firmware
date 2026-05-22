@@ -64,8 +64,8 @@ Both bands are sampled simultaneously by the **TIM3 interrupt at 100 kHz**:
 |--------------------|-------------------------------------------|
 | Sampling rate      | 100 kHz (TIM3 update interrupt)           |
 | Window size        | 1024 samples per classification cycle     |
-| Jamming threshold  | > 80% high samples → `RF_JAMMING`         |
-| Low threshold      | < 20% high samples → `RF_FAULT`           |
+| Jamming threshold  | > 95% high samples → `RF_JAMMING`         |
+| Low threshold      | < 5% high samples → `RF_FAULT`            |
 | Confirmation       | 3 consecutive windows before state change |
 
 Inside `TIM3_IRQHandler`, each interrupt reads PA6 (13.56 MHz) and PB0 (433 MHz), increments the respective `high_count`, and sets the `ready` flag when 1024 samples are accumulated. The main loop then calls `rf_process()` for each band independently.
@@ -138,7 +138,7 @@ Independent Watchdog enabled at startup:
 
 Single-band test firmware used to validate the RF signal generation stage, developed in collaboration with **UNIFEI and Clavis**.
 
-> Shares the same architecture as `dual_band_RF.c` (PLL 72 MHz, TIM3 at 100 kHz, 1024-sample window, 80%/20% thresholds, 3-window confirmation, IWDG, BSRR, WFI) but operates on a **single RF channel** (PB0 only) without the dual-band structure.
+> Shares the same architecture as `dual_band_RF.c` (PLL 72 MHz, TIM3 at 100 kHz, 1024-sample window, 95%/5% thresholds, 3-window confirmation, IWDG, BSRR, WFI) but operates on a **single RF channel** (PB0 only) without the dual-band structure.
 
 ## Build
 
