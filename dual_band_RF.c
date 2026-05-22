@@ -134,10 +134,10 @@ typedef signed int       int32_t;
 #define TIM3_SAMPLE_HZ          100000U
 #define WINDOW_SAMPLES          1024U                 
 #define CONFIRM_WINDOWS         3U                   
-#define JAM_THRESHOLD_1356      ((WINDOW_SAMPLES * 80U) / 100U)
-#define LOW_THRESHOLD_1356      ((WINDOW_SAMPLES * 20U) / 100U)
-#define JAM_THRESHOLD_433       ((WINDOW_SAMPLES * 80U) / 100U)
-#define LOW_THRESHOLD_433       ((WINDOW_SAMPLES * 20U) / 100U)
+#define JAM_THRESHOLD_1356      ((WINDOW_SAMPLES * 95U) / 100U)
+#define LOW_THRESHOLD_1356      ((WINDOW_SAMPLES *  5U) / 100U)
+#define JAM_THRESHOLD_433       ((WINDOW_SAMPLES * 95U) / 100U)
+#define LOW_THRESHOLD_433       ((WINDOW_SAMPLES *  5U) / 100U)
 #define BAND_1356               0U
 #define BAND_433                1U
 #define BAND_COUNT              2U
