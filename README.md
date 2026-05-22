@@ -134,24 +134,18 @@ Independent Watchdog enabled at startup:
 | `FAULT_RF_OVERRUN_433`  |  6  | 433 MHz sample overrun      |
 | `FAULT_IWDG`            |  7  | IWDG configuration timeout  |
 
----
-
 ## `generator_test.c` — RF Signal Generator Test Utility
 
 Single-band test firmware used to validate the RF signal generation stage, developed in collaboration with **UNIFEI and Clavis**.
 
-Shares the same architecture as `dual_band_RF.c` (PLL 72 MHz, TIM3 at 100 kHz, 1024-sample window, 80%/20% thresholds, 3-window confirmation, IWDG, BSRR, WFI) but operates on a **single RF channel** (PB0 only) without the dual-band structure.
-
----
+> Shares the same architecture as `dual_band_RF.c` (PLL 72 MHz, TIM3 at 100 kHz, 1024-sample window, 80%/20% thresholds, 3-window confirmation, IWDG, BSRR, WFI) but operates on a **single RF channel** (PB0 only) without the dual-band structure.
 
 ## Build
 
 **Toolchain:** Keil µVision (ARM Cortex-M3 target)
 **Flash:** ST-Link Utility
 
-All peripheral access is done via direct register writes using the `REG(addr)` macro: `(*(volatile uint32_t *)(uintptr_t)(addr))`.
-
----
+> All peripheral access is done via direct register writes using the `REG(addr)` macro: `(*(volatile uint32_t *)(uintptr_t)(addr))`.
 
 ## Research Context
 
@@ -164,9 +158,7 @@ All peripheral access is done via direct register writes using the `REG(addr)` m
 | Researcher   | Patrícia Rodrigues                                  |
 | Created      | January 15, 2026                                    |
 
-The formal verification model (ESBMC) derived from this firmware logic is maintained in a separate private repository — available upon request.
-
----
+> The formal verification model (ESBMC) derived from this firmware logic is maintained in a separate private repository — available upon request.
 
 ## License
 
