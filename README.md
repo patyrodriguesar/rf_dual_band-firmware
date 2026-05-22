@@ -1,6 +1,6 @@
 # RF Firmware — Dual-Band RF Cyber Threat Detection Device
 
-Bare-metal C firmware for a dual-band RF detector operating at **13.56 MHz** and **433 MHz** (ISM band), designed for spectrum monitoring and cybersecurity threat detection.
+Bare-metal C firmware for a dual-band RF detector operating at **13.56 MHz** and **433 MHz**, designed for spectrum monitoring and cybersecurity threat detection.
 
 Developed as part of a research at **UNIFEI** (Federal University of Itajubá), in collaboration with Clavis Segurança da Informação, affiliated with the **Cybersecurity and Critical Systems (CS)² group**.
 
