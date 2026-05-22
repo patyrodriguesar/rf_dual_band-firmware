@@ -1,3 +1,4 @@
+# Keil uVision build outputs
 Objects/
 Listings/
 *.axf
@@ -12,4 +13,9 @@ Listings/
 *.bak
 *.uvguix
 *.scvd
+
+# ST-Link
 *.stldr
+
+# macOS
+.DS_Store
