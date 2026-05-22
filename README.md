@@ -1,4 +1,4 @@
-# RF Firmware — Dual-Band RF Cyber Threat Detection Device
+# Firmware Dual-Band RF Cyber Threat Detection Device
 
 Bare-metal C firmware for a dual-band RF detector operating at **13.56 MHz** and **433 MHz**, designed for spectrum monitoring and cybersecurity threat detection.
 
