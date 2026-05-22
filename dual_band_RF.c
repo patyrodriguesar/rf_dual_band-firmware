@@ -661,10 +661,10 @@ static const char *state_text(rf_state_t s) {
 
 static void display_header(void) {
     oled_clear();
-	  oled_logo_unifei(0U, 94U);       
-	  oled_print(3U, 0U, "13.56 MHz:");
+	oled_logo_unifei(0U, 94U);       
+	oled_print(3U, 0U, "13.56 MHz:");
     oled_print(5U, 0U, "  433 MHz:");
-	  oled_print(7U, 0U, "UNIFEI and Clavis");
+	oled_print(7U, 0U, "UNIFEI and Clavis");
 }
 
 static void display_states(void) {
@@ -743,7 +743,6 @@ static void standby_enter(void) {
     oled_print(5U, 0U, "Press to turn ON");
 }
 
-/* Main */
 int main(void) {
     (void)iwdg_init();  
 
@@ -758,7 +757,7 @@ int main(void) {
     tim3_init();
 
     if (g_oled_ok != 0U) {
-			  oled_logo_unifei(0U, 94U);
+		oled_logo_unifei(0U, 94U);
         oled_print(3U, 12U, "UNIFEI and Clavis");
         oled_print(5U, 12U, "Dual-Band RF");
         delay_ms(BOOT_SCREEN_MS);
