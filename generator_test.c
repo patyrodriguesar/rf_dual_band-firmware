@@ -9,7 +9,7 @@
 
    Bare-Metal C Programming
 	 
-	 Created on: February 9, 2026
+   Created on: February 9, 2026
 	 
    Last modified: May 22, 2026
 	 
