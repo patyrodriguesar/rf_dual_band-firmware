@@ -131,8 +131,8 @@ typedef signed int     int32_t;
 #define PCLK1_HZ             36000000U
 #define TIM3_SAMPLE_HZ       100000U                 
 #define WINDOW_SAMPLES       1024U                  
-#define JAM_THRESHOLD        ((WINDOW_SAMPLES * 80U) / 100U)   
-#define LOW_THRESHOLD        ((WINDOW_SAMPLES *  20U) / 100U) 
+#define JAM_THRESHOLD        ((WINDOW_SAMPLES * 85U) / 100U)   
+#define LOW_THRESHOLD        ((WINDOW_SAMPLES * 20U) / 100U) 
 #define CONFIRM_WINDOWS      3U  
 #define I2C_SCL_HZ           100000U
 #define I2C_TIMEOUT_MS       5U
