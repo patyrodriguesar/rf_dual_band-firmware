@@ -138,7 +138,7 @@ Independent Watchdog enabled at startup:
 
 Single-band test firmware used to validate the RF signal generation stage, developed in collaboration with **UNIFEI and Clavis**.
 
-> Shares the same architecture as `dual_band_RF.c` (PLL 72 MHz, TIM3 at 100 kHz, 1024-sample window, 80%/20% thresholds, 3-window confirmation, IWDG, BSRR, WFI) but operates on a **single RF channel** (PB0 only) without the dual-band structure.
+> Shares the same architecture as `dual_band_RF.c` (PLL 72 MHz, TIM3 at 100 kHz, 1024-sample window, 85%/20% thresholds, 3-window confirmation, IWDG, BSRR, WFI) but operates on a **single RF channel** (PB0 only) without the dual-band structure.
 
 ## Build
 
