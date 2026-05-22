@@ -4,7 +4,7 @@ Bare-metal C firmware for a dual-band RF detector operating at **13.56 MHz** and
 
 Developed as part of a research at **UNIFEI** (Federal University of Itajubá), in collaboration with Clavis Segurança da Informação, affiliated with the **Cybersecurity and Critical Systems (CS)² group**.
 
-dual_band_RF.c
+## `dual_band_RF.c`
 
 ## Hardware
 
@@ -138,7 +138,7 @@ Independent Watchdog enabled at startup:
 
 Single-band test firmware used to validate the RF signal generation stage, developed in collaboration with **UNIFEI and Clavis**.
 
-> Shares the same architecture as `dual_band_RF.c` (PLL 72 MHz, TIM3 at 100 kHz, 1024-sample window, 95%/5% thresholds, 3-window confirmation, IWDG, BSRR, WFI) but operates on a **single RF channel** (PB0 only) without the dual-band structure.
+> Shares the same architecture as `dual_band_RF.c` (PLL 72 MHz, TIM3 at 100 kHz, 1024-sample window, 80%/20% thresholds, 3-window confirmation, IWDG, BSRR, WFI) but operates on a **single RF channel** (PB0 only) without the dual-band structure.
 
 ## Build
 
