@@ -653,22 +653,6 @@ static void display_state(void) {
     oled_print(3U, 0U, state_text(g_rf.state));
 }
 
-static void display_high_count(void) {
-    char     buf[6];
-    uint32_t v   = g_rf.last_high_count;
-    uint32_t pos = 5U;
-    buf[5] = '\0';
-    if (v == 0U) {
-        buf[4] = '0'; pos = 4U;
-    } else {
-        while ((v > 0U) && (pos > 0U)) {
-            pos--;
-            buf[pos] = (char)('0' + (v % 10U));
-            v /= 10U;
-        }
-    }
-}
-
 static void buzzer_update(void) {
     if ((g_powered != 0U) && (g_rf.state == RF_JAMMING)) {
         GPIO_SET(GPIOA_BSRR, PIN_BUZZER);
@@ -762,7 +746,6 @@ int main(void) {
 
         if ((g_powered != 0U) && (state_changed != 0U)) {
             display_state();
-            display_high_count();
             buzzer_update();
         }
 
