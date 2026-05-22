@@ -134,7 +134,7 @@ Independent Watchdog enabled at startup:
 | `FAULT_RF_OVERRUN_433`  |  6  | 433 MHz sample overrun      |
 | `FAULT_IWDG`            |  7  | IWDG configuration timeout  |
 
-## `generator_test.c` — RF Signal Generator Test Utility
+## `generator_test.c`
 
 Single-band test firmware used to validate the RF signal generation stage, developed in collaboration with **UNIFEI and Clavis**.
 
