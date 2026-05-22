@@ -150,7 +150,7 @@ Single-band test firmware used to validate the RF signal generation stage, devel
 ## Research Context
 
 | Field        | Details                                             |
-|--------------|----------------------------------------------- -----|
+|--------------|-----------------------------------------------------|
 | Institution  | Federal University of Itajuba (UNIFEI)              |
 | Partner      | Clavis Information Security                         |
 | Group        | Cybersecurity and Critical Systems (CS)²            |
@@ -158,7 +158,7 @@ Single-band test firmware used to validate the RF signal generation stage, devel
 | Researcher   | Patrícia Rodrigues                                  |
 | Created      | January 15, 2026                                    |
 
-> The formal verification model (ESBMC) derived from this firmware logic is maintained in a separate private repository — available upon request.
+> The formal verification model (ESBMC) derived from this firmware logic is maintained in a separate private repository (available upon request).
 
 ## License
 
