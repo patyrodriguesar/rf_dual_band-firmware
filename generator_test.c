@@ -717,12 +717,11 @@ static void standby_enter(void) {
 
     GPIO_CLR(GPIOA_BSRR, PIN_BUZZER);
     oled_clear();
-	  oled_logo_unifei(0U, 94U);       
+	oled_logo_unifei(0U, 94U);       
     oled_print(3U, 0U, "Standby");
     oled_print(5U, 0U, "Press to turn ON");
 }
 
-/* Main */
 int main(void) {
     (void)iwdg_init();
 
@@ -737,10 +736,10 @@ int main(void) {
     tim3_init();
 
     if (g_oled_ok != 0U) {
-			  oled_logo_unifei(0U, 94U);       
+		oled_logo_unifei(0U, 94U);       
         oled_print(3U, 12U, "UNIFEI & Clavis");
         oled_print(5U, 12U, "RF Generator Test");
-			  oled_print(6U, 12U, "Test Mode");
+		oled_print(6U, 12U, "Test Mode");
         delay_ms(BOOT_SCREEN_MS);
     }
 
